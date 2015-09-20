@@ -12,6 +12,9 @@ module.exports = function (grunt) {
           {
             name:'a4c-bootstrap',
             exclude: [
+/* // excluding these speeds up build time but means at runtime
+   // the originals -- unminified -- are loaded and it can take 2x longer
+   // leading to load timeouts for users with just slightly dodgy internet
               'lodash-base',
               'jquery',
               'angular',
@@ -39,6 +42,7 @@ module.exports = function (grunt) {
               'd3-tip',
               'd3-pie',
               'dagre-d3'
+*/
             ]//,
 //            excludeShallow: [
 //              'scripts/admin/admin'
